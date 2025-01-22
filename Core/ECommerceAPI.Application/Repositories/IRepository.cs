@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ECommerceAPI.Application.Repositories
 {
-    public interface IRepositroy<T> where T : class
+    public interface IRepository<T> where T : class
     {
        DbSet<T> Table { get; }
     }

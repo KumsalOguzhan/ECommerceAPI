@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ECommerceAPI.Application.Repositories
 {
-    public interface IWriteRepository<T> : IRepositroy<T> where T : class
+    public interface IWriteRepository<T> : IRepository<T> where T : class
     {
         Task<bool> AddAsync(T model);
         Task<bool> AddRangeAsync(List<T> data);
@@ -14,6 +14,6 @@ namespace ECommerceAPI.Application.Repositories
         bool RemoveRange(List<T> data);
         Task<bool> RemoveAsync(string id);
         bool Update(T model);
-        Task<int> SaveAsnyc();
+        Task<int> SaveAsync();
     }
 }
